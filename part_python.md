@@ -15,3 +15,16 @@ def logger(func):
         return result
     return wrapper
 ```
+
+2. 下载序列
+
+```sh
+esearch -db nucleotide -query "NC_007361.1"|efetch -format fasta > 102793.fa
+```
+
+3. 下载病毒序列
+
+```sh
+esearch -db nucleotide -query "txid12066[Organism]"|efilter -query "refseq"|efetch -format fasta > 12066.fa
+```
+
